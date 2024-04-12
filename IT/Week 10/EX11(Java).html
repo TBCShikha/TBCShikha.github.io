@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="addinput">
+    <button onclick="addItems()">Add </button>
+    <button onclick="displayItems()">Display </button>
+    <div id="displayarea"></div>
+
+    <script>
+        let itemArray = [];
+        function addItems(item)
+        {
+            let inputbox=document.getElementById("addItems");
+            let newItem = inputbox.value.trim();
+            if (newItem!=""){
+                itemArray.push(newItem);
+                inputbox.value = "";
+            }
+        }
+
+        function displayItems()
+        {
+            let displayarea = document.getElementById("displayarea");
+            displayarea.innerHTML = "";
+
+            if (itemArray.length === 0){
+                displayarea.textContent= "The array is empty.";      
+             }
+            else{
+                let list= document.createElement("ul");
+                itemArray.forEach(item =>{
+                    let listItem = document.createElement("li");
+                    listItem.textContent= item;
+                    list.appendChild(listItem);
+                });
+                displayarea. appendChild(list);
+             }
+        }
+    </script>
+</body>
+</html>

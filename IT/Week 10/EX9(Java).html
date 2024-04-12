@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div id="sum"></div>
+        <div id="product"></div>
+    <script>
+        function sumofarray(arr)
+        {
+            var sum=0;
+            for(var i=0; i < arr.length; i++)
+            {
+                sum += arr[i];
+            }
+            return sum;
+        }
+        function productofarray(arr)
+        {
+            var product=1;
+            for(var i=0; i < arr.length; i++)
+            {
+                product *= arr[i];
+            }
+            return product;
+        }
+        const numbers=[1,18,13,2,3,5]
+        addition=sumofarray(numbers);
+        document.write("The sum of array is "+ addition);
+        product=productofarray(numbers);
+        document.write("The product of array is "+ product);
+        
+        /*const sum= sumofarray(numbers)
+        document.getElementById('sum').innerHTML= 'Sum: '+ sum;
+
+        const product= productofarray(numbers)
+        document.getElementById('product').innerHTML= 'Product: '+ product;*/
+
+        
+    </script>
+</body>
+</html>

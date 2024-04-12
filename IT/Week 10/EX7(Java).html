@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabular Data with Alternating Row Colors</title>
+</head>
+<body>
+
+<table id="data-table" style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid white; padding: 8px; text-align: center; background-color: #007c92; color: white;">S.N.</th>
+      <th style="border: 1px solid white; padding: 8px; text-align: center; background-color: #007c92; color: white;">Name</th>
+      <th style="border: 1px solid white; padding: 8px; text-align: center; background-color: #007c92; color: white;">Image</th>
+    </tr>
+  </thead>
+  <tbody id="table-body">
+    
+  </tbody>
+</table>
+
+<script>
+  // Data to populate the table
+  const data = [
+    { sn: 1, name: 'Name 1', image: '1.jpg' },
+    { sn: 2, name: 'Name 2', image: '2.jpg' },
+    { sn: 3, name: 'Name 3', image: '3.jpg' },
+    { sn: 4, name: 'Name 4', image: '4.jpg' }
+  ];
+
+  // Function to generate table rows
+  function generateTableRows(data) {
+    const tbody = document.getElementById('table-body');
+    data.forEach((item, index) => {
+      const row = document.createElement('tr');
+      row.style.backgroundColor = index % 2 === 0 ? '#acc8d3' : '#eaeff6'; // Alternate row colors
+      row.innerHTML = `
+        <td style="border: 1px solid white; padding: 8px; text-align: center;">${item.sn}</td>
+        <td style="border: 1px solid white; padding: 8px; text-align: center;">${item.name}</td>
+        <td style="border: 1px solid white; padding: 8px; text-align: center;">${item.image}</td>
+      `;
+      tbody.appendChild(row);
+    });
+  }
+
+  // Call the function to generate table rows
+  generateTableRows(data);
+</script>
+
+</body>
+</html>
