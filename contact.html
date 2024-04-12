@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style3.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="banner">
+            <div class="navbar">
+                <div class="navbar-text"></div>
+                <ul>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="Testimonial.html">Review</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="wireframes.html">Wireframes</a></li>
+                    
+                    
+                </ul>
+            </div>
+    <div class="container1">
+        <div class="left">
+            <h3 class="heading">Get In Touch </h3>
+            <p class="text"> We are here for you! How can we help?</p>
+            <form id="contactForm" action="www.google.com" method="post" onsubmit="return validateForm()">
+                <div class="inputbox">
+                    <input type="text" name="name" placeholder="Enter your name">
+                </div>
+                <div class="inputbox">
+                    <input type="text" name="email" placeholder="Enter your mail address">
+                </div>
+                <div class="inputbox">
+                    <textarea  name="msg" placeholder="Write something"></textarea>
+                </div>
+                    <button class="btn">Submit</button>
+                    <button class="btn">Clear</button>
+            </form>
+        </div>
+        <div class="right">
+            <div class="illustration">
+                <img src="map.jpg" alt="Location for Studio">
+            </div>
+            <div class="contact">
+                <div class="infobox">
+                    <div class="icon">
+                        <ion-icon name="location"></ion-icon>
+                    </div>
+                    <div class="text">
+                        <p>12356 Street, New York, USA </p>
+                    </div>
+                </div>
+                <div class="infobox">
+                    <div class="icon">
+                        <ion-icon name="Call"></ion-icon>
+                    </div>
+                    <div class="text">
+                        <a href="tel:+977 9803400987">+977 9803400987 </a>
+                    </div>
+                </div>
+                <div class="infobox">
+                    <div class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </div>
+                    <div class="text">
+                        <a href="mailto:kshikha23@tbc.edu.np">rajshi@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            if (name.trim() == "") {
+                alert("Please enter your name");
+                return false;
+            }
+
+            if (email.trim() == "") {
+                alert("Please enter your email");
+                return false;
+            }
+
+            if (message.trim() == "") {
+                alert("Please enter your message");
+                return false;
+            }
+
+            return true;
+        }
+
+        function clearForm() {
+            document.getElementById("contactForm").reset();
+        }
+    </script>
+    <footer class="footer">
+        <div class="foocol" >
+            <div class="social-links">
+                <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instragram.com"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+    
+            </div>
+            <p>ArtofElegance.com, Venice, Italy</p>
+        </div>
+    </footer>
+</div>
+</body> 
+</html>
